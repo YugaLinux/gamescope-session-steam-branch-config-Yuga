@@ -1,2 +1,2 @@
-# gamescope-session-steam-system-update-branch-config-Yuga
-The branch config for Yuga Linux
+# gamescope-session-steam-select-branch-Yuga
+The branch select script and config for Yuga Linux

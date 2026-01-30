@@ -1,7 +1,12 @@
 #!/bin/bash
 set -e
 
-BRANCH_PATH="/etc/gamescope-session-steam/source.conf"
+if [[ $EUID -ne 0 ]];
+then
+    exec pkexec --disable-internal-agent "$0" "$@"
+fi
+
+BRANCH_PATH="/etc/gamescope-session-steam/select-branch.conf"
 . "$BRANCH_PATH"
 
 # To correctly display the branches in steam, we need to use the SteamOS branched rel, rc and beta.
